@@ -1,3 +1,4 @@
+import 'package:e_commerse_apk/src/presentation/widgets/DefaultTextfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -49,25 +50,12 @@ class LoginPage extends StatelessWidget {
                         left: 25,
                         right: 25
                       ),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          label: Text(
-                            'Correo electronico',
-                            style: TextStyle(
-                              color: Colors.white
-                            ),
-                          ),
-                          prefixIcon: Icon(
-                            Icons.email,
-                            color: Colors.white,
-                          ),
-                          enabledBorder:UnderlineInputBorder(
-                            borderSide: BorderSide(color:  Colors.white),
-                          ),
-                          focusedBorder:UnderlineInputBorder(
-                            borderSide: BorderSide(color:  Colors.white),
-                          ),
-                        ),
+                      child: DefaultTextfield(
+                        label: 'Correo electronico',
+                        icon:  Icons.email,
+                        onChanged: (text){
+                          print('text: ${text}');
+                        },
                       ),
                     ),
                     Container(
@@ -75,25 +63,13 @@ class LoginPage extends StatelessWidget {
                           left: 25,
                           right: 25
                       ),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          label: Text(
-                           'Contraseña',
-                            style: TextStyle(
-                                color: Colors.white
-                            ),
-                          ),
-                          prefixIcon: Icon(
-                            Icons.lock,
-                            color: Colors.white,
-                          ),
-                          enabledBorder:UnderlineInputBorder(
-                            borderSide: BorderSide(color:  Colors.white),
-                          ),
-                          focusedBorder:UnderlineInputBorder(
-                            borderSide: BorderSide(color:  Colors.white),
-                          ),
-                        ),
+                      child: DefaultTextfield(
+                        label: 'Contraseña',
+                        icon:  Icons.lock,
+                        onChanged: (text){
+                          print('text: ${text}');
+                        },
+                        obscureText: true,
                       ),
                     ),
                     Container(
