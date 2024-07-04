@@ -1,4 +1,5 @@
 import 'package:e_commerse_apk/src/presentation/pages/auth/login/LoginPage.dart';
+import 'package:e_commerse_apk/src/presentation/pages/auth/register/RegisterPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: 'login',
       routes: {
-        'login': (BuildContext context) => LoginPage()
+        'login': (BuildContext context) => LoginPage(),
+        'register': (BuildContext context) => Registerpage(),
       }
     );
   }
